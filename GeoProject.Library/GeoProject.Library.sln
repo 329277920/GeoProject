@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoProject.Library", "GeoProject.Library.csproj", "{F46A28E3-D102-47B8-81CD-6F8CBA2D3892}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoProject.Tester", "..\GeoProject.Tester\GeoProject.Tester.csproj", "{A21538B6-99C8-4A4B-ADFF-7A219EDFA3BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F46A28E3-D102-47B8-81CD-6F8CBA2D3892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F46A28E3-D102-47B8-81CD-6F8CBA2D3892}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F46A28E3-D102-47B8-81CD-6F8CBA2D3892}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F46A28E3-D102-47B8-81CD-6F8CBA2D3892}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A21538B6-99C8-4A4B-ADFF-7A219EDFA3BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A21538B6-99C8-4A4B-ADFF-7A219EDFA3BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A21538B6-99C8-4A4B-ADFF-7A219EDFA3BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A21538B6-99C8-4A4B-ADFF-7A219EDFA3BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

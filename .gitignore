@@ -3,3 +3,6 @@
 ################################################################################
 
 /GeoProject.Library/obj/Debug
+/GeoProject.Library/bin/Debug
+/GeoProject.Tester/bin/Debug
+/GeoProject.Tester/obj/Debug
