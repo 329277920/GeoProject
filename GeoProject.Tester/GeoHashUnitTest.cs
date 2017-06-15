@@ -12,7 +12,7 @@ namespace GeoProject.Tester
         {
             var ss = new GeoHash().Encode(170.7896, -78.11868);
 
-           
+            var loc = new GeoHash().Decode(ss);
         }
     }
 }

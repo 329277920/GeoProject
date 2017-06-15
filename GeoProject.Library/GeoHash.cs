@@ -66,5 +66,47 @@ namespace GeoProject.Library
            
             return tempHash.ToString();
         }
+
+        /// <summary>
+        /// 将一个GeoHash值解码成经纬度
+        /// </summary>
+        /// <param name="geoHash">GeoHash串</param>
+        /// <returns></returns>
+        public unsafe double[] Decode(string geoHash)
+        {
+            bool isLat = false;
+            var longRange = new double[] { -180, 0, 180 };
+            var latRange = new double[] { -90, 0, 90 };
+            double latitude = 0.0;
+            double longitude = 0.0;
+            foreach (var c in geoHash)
+            {
+                // 获得Hash中某个字符对应的数值
+                var temp = Base32Charset.IndexOf(c);
+                for (var i = Bits.Length - 1; i >= 0; i--)
+                {
+                    var tempRange = isLat ? latRange : longRange;
+                    var tempValue = isLat ? &latitude : &longitude;
+                    // 位于第一个区间，取最小值
+                    if ((temp & Bits[i]) == 0)
+                    {
+                        *tempValue = tempRange[0];
+                        tempRange[2] = tempRange[1];
+                    }
+                    // 位于第二个区间，取中间值
+                    else
+                    {
+                        *tempValue = tempRange[1];
+                        tempRange[0] = tempRange[1];                     
+                    }
+
+                    // 设置区间值
+                    tempRange[1] = tempRange[0] + (Math.Abs(Math.Abs(tempRange[2]) - Math.Abs(tempRange[0]))) / 2;
+
+                    isLat = !isLat;
+                }
+            }
+            return new double[] { longitude,latitude };
+        }
     }
 }
