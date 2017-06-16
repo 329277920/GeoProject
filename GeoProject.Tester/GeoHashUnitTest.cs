@@ -10,9 +10,11 @@ namespace GeoProject.Tester
         [TestMethod]
         public void TestGeoHash()
         {
-            var ss = new GeoHash().Encode(170.7896, -78.11868);
+            var ss = new GeoHash().Encode(170.7896, -78.11868, 11);
 
             var loc = new GeoHash().Decode(ss);
+
+            var yy = new GeoHash().Top(ss);
         }
     }
 }
